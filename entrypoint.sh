@@ -18,8 +18,6 @@ EOF
 
 echo "Create loopia auth file..."
 cat > /dehydrated/hooks/loopia/loopia-api-user.auth << EOF
-#user=$LOOPIA_USER
-#pass=$LOOPIA_PASSWORD
 user='$LOOPIA_USER'
 pass='$LOOPIA_PASSWORD'
 EOF
