@@ -5,9 +5,9 @@ cat > /dehydrated/config << EOF
 CA="https://acme-v02.api.letsencrypt.org/directory"
 #CA="https://acme-staging-v02.api.letsencrypt.org/directory"
 CHALLENGETYPE="dns-01"
-DOMAINS_TXT="\${BASEDIR}/domains.txt"
-CONTACT_EMAIL=""$LETSENCRYPT_EMAIL""
-HOOK="\${BASEDIR}/hooks/loopia/loopia_hook.sh"
+DOMAINS_TXT="/dehydrated/domains.txt"
+CONTACT_EMAIL="$LETSENCRYPT_EMAIL"
+HOOK="/dehydrated/hooks/loopia/loopia_hook.sh"
 CERTDIR="/letsencrypt"
 EOF
 
