@@ -9,7 +9,7 @@ docker run -it \
 -e "LOOPIA_USER=yourapiuser@loopiaapi" \
 -e "LOOPIA_PASSWORD=yourapipassword" \
 --mount type=bind,src=/some/path/letsencrypt,dst=/letsencrypt \
-dehydrated bash
+mattiasegly/dehydrated
 
 I know nothing about code, so assume that everything here sets the world on fire.
 Use at your own peril.
