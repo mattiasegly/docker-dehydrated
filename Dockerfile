@@ -1,4 +1,4 @@
-FROM balenalib/rpi:buster
+FROM balenalib/rpi:stretch
 
 RUN [ "cross-build-start" ]
 
