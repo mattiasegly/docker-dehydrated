@@ -1,7 +1,6 @@
 # docker-rpi-dehydrated
 Raspberry Pi Docker Container for Let's Encrypt certificates<BR>
-The container tries to ease certificate management. It uses dehydrated to request new wildcard certs, and a Loopia hook to update public DNS TXT records (havent figured out how to make it work yet).<BR>
-This is work in progress, that's why it has to be run in an interactive terminal.
+The container tries to ease certificate management. It uses dehydrated to request new wildcard certs, and a Loopia hook to update public DNS TXT records.
 
 Run with:<BR>
 docker run -it \
