@@ -1,5 +1,5 @@
 # docker-rpi-dehydrated
-Raspberry Pi Docker Container for Let's Encrypt certificates<BR>
+Raspberry Pi Docker Container for Loopia Let's Encrypt certificates<BR>
 The container tries to ease certificate management. It uses dehydrated to request new wildcard certs, and a Loopia hook to update public DNS TXT records.
 
 Run with:<BR>
