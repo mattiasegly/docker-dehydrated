@@ -1,3 +1,4 @@
+#Using stretch because of curl SSL error on buster
 FROM balenalib/rpi:stretch AS builder
 RUN [ "cross-build-start" ]
 
@@ -11,6 +12,7 @@ RUN git clone https://github.com/lukas2511/dehydrated.git /dehydrated && \
 
 RUN [ "cross-build-end" ]
 
+#Using stretch because of curl SSL error on buster
 FROM balenalib/rpi:stretch
 RUN [ "cross-build-start" ]
 
