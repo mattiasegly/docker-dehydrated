@@ -12,8 +12,7 @@ RUN git clone https://github.com/lukas2511/dehydrated.git /dehydrated && \
 
 RUN [ "cross-build-end" ]
 
-#Using stretch because of curl SSL error on buster
-FROM balenalib/rpi:stretch
+FROM balenalib/rpi:buster
 RUN [ "cross-build-start" ]
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
