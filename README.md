@@ -1,10 +1,9 @@
 # rpi-dehydrated
 Raspberry Pi Docker Container for Loopia Let's Encrypt certificates<BR>
-
 Multiarch build using balena's Raspberry Pi image and docker's official Debian image.<BR>
-Running with tag :latest should work on all Raspberry Pi models and standard 64-bit hardware.
 
 The container tries to ease certificate management. It uses dehydrated to request new wildcard certs, and a Loopia hook to update public DNS TXT records.
+This container is now "intentionally" broken as it tries to do two wildcard domains. One of them has to be manually updated in Loopia's web portal.
 
 Run with:<BR>
 docker run -it \\\
