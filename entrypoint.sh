@@ -13,7 +13,7 @@ EOF
 
 echo "Create domain list file..."
 cat > /dehydrated/domains.txt << EOF
-$LETSENCRYPT_DOMAIN *.$LETSENCRYPT_DOMAIN *.internal.$LETSENCRYPT_DOMAIN
+$LETSENCRYPT_DOMAIN *.$LETSENCRYPT_DOMAIN
 EOF
 
 echo "Create loopia auth file..."
