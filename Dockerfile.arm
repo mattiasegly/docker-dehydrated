@@ -33,4 +33,4 @@ RUN [ "cross-build-end" ]
 VOLUME /letsencrypt
 
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["/dehydrated/dehydrated", "-c", "--accept-terms"]
+CMD ["/dehydrated/dehydrated", "--cron", "--accept-terms", "--force"]
