@@ -25,4 +25,4 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 VOLUME /letsencrypt
 
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["/dehydrated/dehydrated", "-c", "--accept-terms"]
+CMD ["/dehydrated/dehydrated", "--cron", "--accept-terms", "--force"]
