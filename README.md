@@ -21,4 +21,4 @@ Built on the work of:<BR>
 https://github.com/lukas2511/dehydrated<BR>
 https://github.com/aaff-se/dehydrated-loopia-api-hook
 
-20201014
+20201125

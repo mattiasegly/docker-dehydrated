@@ -1,8 +1,7 @@
-FROM mattiasegly/base-image:arm AS builder
+FROM mattiasegly/base-image:buster-arm AS builder
 RUN [ "cross-build-start" ]
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	ca-certificates \
 	git \
 && rm -rf /var/lib/apt/lists/*
 
@@ -12,17 +11,12 @@ RUN git clone https://github.com/dehydrated-io/dehydrated.git /dehydrated && \
 
 RUN [ "cross-build-end" ]
 
-FROM mattiasegly/base-image:arm
+FROM mattiasegly/base-image:buster-arm
 RUN [ "cross-build-start" ]
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
-	ca-certificates \
-	curl \
-	openssl \
 	libxml2-utils \
 && rm -rf /var/lib/apt/lists/*
-
-ENV CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
 COPY --from=builder /dehydrated /dehydrated
 COPY entrypoint.sh /usr/local/bin
