@@ -7,7 +7,7 @@ CA="https://acme-v02.api.letsencrypt.org/directory"
 CHALLENGETYPE="dns-01"
 DOMAINS_TXT="/dehydrated/domains.txt"
 CONTACT_EMAIL="$LETSENCRYPT_EMAIL"
-HOOK="/dehydrated/hooks/loopia/loopia_hook.sh"
+HOOK="/dehydrated/hooks/manual/hook.sh"
 CERTDIR="/letsencrypt"
 EOF
 

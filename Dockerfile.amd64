@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 && rm -rf /var/lib/apt/lists/*
 
 RUN git clone https://github.com/dehydrated-io/dehydrated.git /dehydrated && \
-	git clone https://github.com/aaff-se/dehydrated-loopia-api-hook.git /dehydrated/hooks/loopia && \
-	chmod +x /dehydrated/hooks/loopia/loopia_hook.sh
+	git clone https://github.com/gheja/dns-01-manual.git /dehydrated/hooks/manual && \
+	chmod +x /dehydrated/hooks/manual/hook.sh
 
 FROM mattiasegly/base-image:buster-amd64
 
