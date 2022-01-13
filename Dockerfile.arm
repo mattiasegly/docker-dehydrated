@@ -1,4 +1,4 @@
-FROM mattiasegly/base-image:buster-arm AS builder
+FROM mattiasegly/base-image:bullseye-arm AS builder
 RUN [ "cross-build-start" ]
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -11,7 +11,7 @@ RUN git clone https://github.com/dehydrated-io/dehydrated.git /dehydrated && \
 
 RUN [ "cross-build-end" ]
 
-FROM mattiasegly/base-image:buster-arm
+FROM mattiasegly/base-image:bullseye-arm
 RUN [ "cross-build-start" ]
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
