@@ -16,12 +16,6 @@ cat > /dehydrated/domains.txt << EOF
 $LETSENCRYPT_DOMAIN *.$LETSENCRYPT_DOMAIN *.internal.$LETSENCRYPT_DOMAIN
 EOF
 
-echo "Create loopia auth file..."
-cat > /dehydrated/hooks/loopia/loopia-api-user.auth << EOF
-user='$LOOPIA_USER'
-pass='$LOOPIA_PASSWORD'
-EOF
-
 echo "Print dehydrated configuration values..."
 /dehydrated/dehydrated --env
 
