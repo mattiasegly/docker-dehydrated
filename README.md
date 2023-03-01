@@ -1,6 +1,6 @@
 # rpi-dehydrated
-Raspberry Pi Docker Container for Let's Encrypt certificates<BR>
-Multiarch build using balena's Raspberry Pi image and docker's official Debian image.<BR>
+Docker container for Let's Encrypt certificates.<BR>
+Multi-arch build using balena's Raspberry Pi image and docker's official Debian image.
 
 The container tries to ease certificate management. It uses dehydrated to request new wildcard certs, and a hook to manually update public DNS TXT records.
 
@@ -17,5 +17,3 @@ Use at your own peril.
 Built on the work of:<BR>
 https://github.com/lukas2511/dehydrated<BR>
 https://github.com/gheja/dns-01-manual
-
-20220113

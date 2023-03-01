@@ -1,5 +1,6 @@
 ARG ARCH=
-FROM mattiasegly/base-image:bullseye-${ARCH} AS builder
+ARG SOURCE_BRANCH=
+FROM mattiasegly/base-image:${SOURCE_BRANCH}-${ARCH} AS builder
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	git \
@@ -9,7 +10,7 @@ RUN git clone https://github.com/dehydrated-io/dehydrated.git /dehydrated && \
 	git clone https://github.com/gheja/dns-01-manual.git /dehydrated/hooks/manual && \
 	chmod +x /dehydrated/hooks/manual/hook.sh
 
-FROM mattiasegly/base-image:bullseye-${ARCH}
+FROM mattiasegly/base-image:${SOURCE_BRANCH}-${ARCH}
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	libxml2-utils \
